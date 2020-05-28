@@ -1,0 +1,157 @@
+<?php
+
+//echo "begin";
+
+$post = $_POST;
+
+print_r($post);
+
+
+$get = $_GET;
+
+print_r($get);
+
+
+$idCommandLast = $get['idCommandLast'];
+$idUser = $get['idUser'];
+$idTable = $get['idTable'];
+$totalCommand = $get['totalCommand'];
+$idCommandLast = $get['idCommandLast'];
+
+$drink = $get['drink'];
+
+//echo "idCommandLast $idCommandLast";
+
+include_once("connect.php");
+//include_once("config.php");
+
+//$tableName = $_POST["tableName"];
+$tableName = 'command_line';
+
+
+//echo "tableName $tableName";
+
+/*
+
+print("<form action='insert.php' method= 'post' >");
+
+print("<input type='hidden' name='tableName' value=$tableName>");
+print("<input type='submit' value='new record'>");
+
+
+print ("</form>");
+
+*/
+
+
+
+$stmt = $conn->prepare('select * from ' .  $tableName . ' where fk_command=' . $idCommandLast );
+
+$stmt->execute();
+
+$arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+//print_r($arr);
+
+// this is the total of the command record
+$commandTotal = 0;
+
+print ("<table border=1>");
+
+print ("<tr>");
+
+print ("<td>");
+
+print ("<table border=1");
+if ($arr)
+{
+   foreach($arr as  $row)
+   {
+      print ("<tr>");
+     // print ("<td>");
+     // print ($drink);      
+     // print ("</td>");
+
+      foreach ($row as $key=>$value)
+      {
+         print ("<td >");
+         print ($value);
+         if ($key == 'subtotal')
+            $commandTotal = $commandTotal + $value;
+         elseif ($key == 'idDrink')
+         {
+            $query = "select Choice from drinks where id = $value";
+            $stmt = $conn->prepare($insert);
+            $stmt->execute();
+            $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            print ($arr[
+//            $conn->
+
+         }
+      
+         print ("</td>");
+      }
+   print ("<td >");
+   echo "<form action='insert1CommandLine.php' method='post'>";
+
+   echo "<input type='hidden' name='idDrink' value=$idUser />"; 
+   echo "<input type='hidden' name='idTable' value=$idTable />"; 
+
+//   echo "<input type='hidden' name='tableName' value=$tableName />"; 
+   echo "<input type='hidden' name='totalCommand' value=$totalCommand />"; 
+
+   echo "<input type='hidden' name='idCommandLast' value=$idCommandLast />"; 
+   echo "<input type='hidden' name='idUser' value=$idUser />"; 
+
+   echo "<input type=submit value='update/delete' />";
+   echo "</form>"; 
+
+   print ("</td>");
+   print ("</tr>");
+
+//   print ("<table border=1 >");
+//   print ("<tr>");
+//   print ("<td>");
+
+
+
+
+
+// button for conmend finish
+
+//   print ("<td>");
+
+
+
+//   print ("</td>");
+//   print ("</tr>");
+   }
+       
+
+}
+else
+{
+   echo "<br>no record";
+}
+
+
+print ("</table>");
+
+print ("<td>");
+print ("finish command");
+   print ("total command $commandTotal");
+   print ("<form action='selectUpdateCommandFinish.php' method='post'>");
+   print ("<input type='hidden' name='commandTotal' value=$commandTotal />");
+   print ("<input type='hidden' name='idUser' value=$idUser />");
+   print ("<input type='submit' value='finish command' />");
+   print ("</form>");
+   print ("</td>");
+   print ("</tr>");
+   print ("</table>");
+
+
+
+
+?>
+
+

@@ -24,8 +24,8 @@ print ("<table border=1>");
 foreach($arr as  $row)
 {
     print ("<form action ='delete1.php' method='get'>");
-    print ("<input  type = hidden name='id' value=$id>");
-    print ("<input  type = hidden name='tableName' value=$tableName>"); 
+
+    print ("<input  type = text name='tableName' value=$tableName>"); 
     foreach ($row as $key=>$value)
     {
        print ("<tr>");

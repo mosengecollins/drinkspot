@@ -1,9 +1,9 @@
 <?php
 
-$id  = $_GET['id'];
-$tableName = $_GET['tableName'];
+$id  = $_POST['id'];
+$tableName = $_POST['tableName'];
 
-//echo "id $id<br >";
+echo "id $id<br >";
 
 include_once("connect.php");
 include_once("config.php");
@@ -23,7 +23,7 @@ print ("<table border=1>");
 
 foreach($arr as  $row)
 {
-    print ("<form action ='delete1.php' method='get'>");
+    print ("<form action ='delete1.php' method='post'>");
     print ("<input  type = hidden name='id' value=$id>");
     print ("<input  type = hidden name='tableName' value=$tableName>"); 
     foreach ($row as $key=>$value)

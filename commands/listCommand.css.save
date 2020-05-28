@@ -1,0 +1,23 @@
+
+table.table1 {
+/*  margin: 0 auto;
+  border: 1px solid #1C6EA4;*/
+  background-color: #00ff00;
+  /*background-color: red;*/
+  width: 90%;
+  text-align: center;
+  /*border-collapse: collapse;*/
+}
+
+
+table.table2 {
+  margin: 0 auto;
+  border: 1px solid #1C6EA4;
+  background-color: #ff0000;
+  /*background-color: red;*/
+  width: 90%;
+  text-align: center;
+  /*border-collapse: collapse;*/
+}
+
+

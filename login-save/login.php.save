@@ -1,0 +1,10 @@
+<h1> login </h1i>
+
+
+<form action='ploginControl.php' method=get>
+
+<input type='text' value='put your name' /> 
+<input type='text' value='put your passwort' />
+<input type=submit>
+
+</form> 

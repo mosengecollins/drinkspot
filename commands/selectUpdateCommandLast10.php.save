@@ -1,0 +1,27 @@
+<?php
+
+echo "begin selectUpdateCommandLast10<br>";
+
+include_once("connect.php");
+
+
+
+$query = "select * from command order by id desc limit 10";
+
+$stmt = $conn->prepare($query);
+
+$stmt->execute();
+
+$arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+print_r($arr);
+
+foreach ($arr as $key => $value) 
+{
+   $idC 
+
+}
+
+
+echo "<br>end selectUpdateCommandLast10<br>";
+?>

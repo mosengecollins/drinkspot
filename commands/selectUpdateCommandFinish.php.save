@@ -1,0 +1,41 @@
+<?php
+
+$post = $_POST;
+print_r($post);
+
+
+
+
+
+
+
+print ($post['commandTotal']);
+
+$commandTotal = $post['commandTotal'];
+
+$idTable = $post['idTable'];
+$idUser = $post['idUser'];
+$idCommandLast = $_POST['idCommandLast'];
+
+print ("total command $commandTotal");
+
+include_once ("insert1C
+
+
+
+print ("<form action='insert1CommandPaid.php' method='post'> ");
+    
+print ("<input type='text' name= 'commandPaid' value=$commandTotal />");
+print ("<input type='hidden' name= 'commandTotal' value=$commandTotal />");
+print ("<input type='hidden' name= 'idTable' value=$idTable />");
+print ("<input type='hidden' name= 'idUser' value=$idUser />");
+print ("<input type='hidden' name= 'idCommandLast' value=$idCommandLast />");
+print ("<input type='submit' value='paid' />");
+print ("</form>");
+
+
+
+
+?>
+
+

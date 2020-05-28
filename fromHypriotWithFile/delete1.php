@@ -3,7 +3,7 @@
 $id  = $_GET['id'];
 $tableName = $_GET['tableName'];
 
-echo "id $id<br >";
+//echo "id $id<br >";
 
 include_once("connect.php");
 include_once ("config.php");
