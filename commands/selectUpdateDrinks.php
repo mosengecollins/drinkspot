@@ -1,12 +1,15 @@
+<!--
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>drinkspot</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="drinks.css" rel="stylesheet" type="text/css">
+<link href="commandLine.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+-->
 
 <?php
 
@@ -54,7 +57,7 @@ $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if ($arr)
 {
-   print ("<table class='drinks' border=1>");
+   print ("<table class='tbdrinks' border=1>");
    //print ("<table>") ;
 
 
@@ -63,7 +66,7 @@ if ($arr)
    {
 //      echo("<br>");
 //      print_r($row);
-      print ("<tr class='drinks'>");
+      print ("<tr class='trdrinks'>");
 
 
       print ("<form action='insert1CommandLine.php' method='post'");

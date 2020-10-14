@@ -1,0 +1,25 @@
+/*table.login {*/
+table {
+  margin: 0 auto;
+  border: 10px solid #1C6EA4;
+  background-color: #00ff00;
+  /*background-color: red;*/
+  width: 90%;
+  text-align: right;
+  /*border-collapse: collapse;*/
+}
+
+h1 {
+
+
+  color: green;
+  text-align: center;
+}
+
+h2 {
+
+
+  color: blue;
+  text-align: center;
+}
+

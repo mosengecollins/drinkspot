@@ -1,4 +1,4 @@
-<!--
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +9,18 @@
 </head>
 <body>
 
--->
-
 <?php
 
-echo "beginnnnnnnnnnnnnnnnnnnnnnnnnn";
-
-
+//echo "begin";
 
 $post = $_POST;
 
-print_r($post);
+//print_r($post);
 
 
 $get = $_GET;
 
-print_r($get);
+//print_r($get);
 
 
 $idCommandLast = $get['idCommandLast'];
@@ -35,7 +31,7 @@ $totalCommand = $get['totalCommand'];
 
 $drink = $get['drink'];
 
-echo "idCommandLast $idCommandLast";
+//echo "idCommandLast $idCommandLast";
 
 include_once("connect.php");
 //include_once("config.php");
@@ -87,7 +83,6 @@ $commandTotal = 0;
 //   echo "POST NULL";
  
 
-$idCommandLine = 0;
 
 if ($arr)
 {
@@ -108,13 +103,10 @@ if ($arr)
             $commandTotal = $commandTotal + $value;
             print ($value);
          }
-
          elseif ($key == 'id')
          {
-            $idCommandLine = $value;
-
+            $idC;
          }
-
          elseif ($key == 'fk_command')
             ;
          elseif ($key == 'fk_dinks')
@@ -167,23 +159,11 @@ if ($arr)
 
 
 
-   print ("<form action='deleteCommandLine.php' method='post' >");
-   print ("<input type='hidden' name='idCommandLine' value=$idCommandLine />"); 
-
-//   print ("<input type='hidden' name='idCommandLine' value=1 />"); 
-   echo "<input type='hidden' name='idTable' value=$idTable />"; 
-
-//   echo "<input type='hidden' name='tableName' value=$tableName />"; 
-//   echo "<input type='hidden' name='totalCommand' value=$totalCommand placeholder="insert password"/>"; 
-   echo "<input type='hidden' name='totalCommand' value=$totalCommand />"; 
-
-   echo "<input type='hidden' name='idCommandLast' value=$idCommandLast />"; 
-   echo "<input type='hidden' name='idUser' value=$idUser />"; 
+   print ("<form action='deleteComandLine.php' method='post' >");
 
 
 
-   print ("<input type=submit value='delete' />");
-
+   echo  ("<input type=submit value='delete111' />");
    print ("</form>");
 
    print ("</td>");

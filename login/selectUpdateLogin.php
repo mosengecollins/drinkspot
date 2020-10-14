@@ -2,6 +2,7 @@
 <head>
 <link href="login.css" rel="stylesheet" type="text/css">
 <!--
+<link href="tableChoose.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css"><meta http$
 -->
 
@@ -52,8 +53,8 @@ $postCount = count($post);
 if (!$post)
 {
 
-//   print ("<table border=1>");
-   print ("<table class='login' border=1>");
+  // print ("<table border=1>");
+    print ("<table class='login' border=1>");
 
    print ("<tr>");
 
@@ -66,8 +67,7 @@ if (!$post)
    {
 
 
-      print ("<form action='
-login/selectUpdateLogin.php' method='post'>");
+      print ("<form action='login/selectUpdateLogin.php' method='post'>");
 
 
 
@@ -184,10 +184,14 @@ else
 //               $action = '../commands/selectUpdateCommandLast10.php';
                //$action = "../commands/selectUpdateCommandLast10.php?idUser='$idUser'";
                $action = "../commands/selectUpdateCommandLast10.php";
+//               $input = "<input type='hidden' name='idUser' value=$idUser />";
+
 //               $action = '../commands/test1.php';
             else
 //               $action = "../commands/index.php?idUser='$idUser'";
                $action = "../commands/index.php";
+               $input = "<input type='hidden' name='idUser' value=$idUser />";  
+
          }
 //      print ("<form action='../commands/index.php' method='post' >");
 
@@ -198,19 +202,21 @@ else
    {
 
       print("false login");
-      $action = '../login/selectUpdateLogin.php';
+//      $action = '../login/selectUpdateLogin.php';
+      $action = '../';
       $submitValue = 'falseLogin';
-      
-
+      $idUser = 1;
+      $input = "";
+ 
    }
-
 
 //   echo "<br>action $action<br>";
 
    print ("<form action=$action method='post' >");
-   print ("<input type='hidden' name='idUser' value=$idUser />");
+//   print ("<input type='hidden' name='idUser' value=$idUser />");
+   print ($input);
 
-   print ("<input type='submit' value=$submitValue />");
+   print ("<center><input type='submit' value=$submitValue /></center>");
 
    print ("</form>");
 

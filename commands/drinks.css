@@ -1,13 +1,19 @@
-table.drinks {
+table.drinks, tr , td {
+
   margin: 0 auto;
-  border: 5px solid #1C6EA4;
-  background-color: #EEEEEE;
-  /*background-color: red;*/
+/*
+  margin: 0 auto;
+  border: 5px solid #1C6EA4;*/
+  /*background-color: #EEEEEE;*/
+  background-color: orange;
+/*
   width: 90%;
   text-align: center;
+*/
   /*border-collapse: collapse;*/
-}
 
+}
+/*
 table.drinks,tr.drinks:nth-child(even) {
   background: #ffff00;
 }
@@ -15,4 +21,4 @@ table.drinks,tr.drinks:nth-child(odd) {
 #  background: #bbf4F5;
   background: #00ffff;
 }
-
+*/

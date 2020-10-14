@@ -57,14 +57,5 @@ tr.trdrinks{
 }
 
 }
+
 */
-
-       /*  Define the background color for all the ODD background rows  */
-        tr.trdrinks:nth-child(odd){ 
-                background: #b8d1f3;
-        }
-        /*  Define the background color for all the EVEN background rows  */
-        tr.trdrinks:nth-child(even){
-                background: #dae5f4;
-        }
-

@@ -30,13 +30,13 @@ h1,h2 {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
   /*background-color: red;*/
-  width: 90%;
+  width: 50%;
   text-align: center;
   /*border-collapse: collapse;*/
 }
 
 th {
-  background-color: #ff0000;
+  background-color: #00ff00;
   color: white;
 }
 
@@ -55,7 +55,7 @@ table,tr:nth-child(even) {
 }
 table,tr:nth-child(odd) {
 #  background: #bbf4F5;
-  background: #00ffff;
+  background: #0000ff;
 }
 
 table,tr:hover {background-color: #ddd;}
